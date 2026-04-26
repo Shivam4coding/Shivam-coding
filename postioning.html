@@ -1,0 +1,115 @@
+<!--
+1) Start the HTML document with `<!DOCTYPE html>` to indicate an HTML5 page.
+
+2) Open the `<html>` tag to wrap the full webpage.
+
+3) Inside the `<head>` section, add internal CSS using `<style>`.
+
+4) Base styling for all `div` elements:
+   a) `right: 30px;` is written, but it will only have effect if the div has a position set
+      (relative/absolute/fixed/sticky). For normal/static elements, it does nothing.
+   b) `border: 3px solid #73AD21;` adds a green border to divs by default.
+
+5) Style `.absolute` class:
+   a) `position: absolute;` removes the div from normal document flow.
+   b) `left: 50px;` places it 50px from the left edge of its nearest positioned parent.
+   c) `border: 3px solid blue;` adds a blue border so it stands out.
+
+6) Style `.relative` class:
+   a) `position: relative;` keeps the element in normal flow, but allows offsets.
+   b) `left: 100px;` moves the element 100px to the right from its normal position.
+   c) Border remains green.
+
+7) Style `.fixed` class:
+   a) `position: fixed;` fixes the element to the browser window (viewport).
+   b) `top: 0;` places it at the very top.
+   c) `right: 20px;` places it 20px from the right side of the viewport.
+   d) `width: 300px;` sets the width of the fixed div.
+   e) Adds a green border.
+
+8) Style `.sticky` class:
+   a) `position: sticky;` acts like relative until the page scroll reaches the threshold.
+   b) `top: 1px;` sticks near the top when scrolling (1px from the top).
+   c) `left: 20px;` offsets it from the left.
+   d) `width: 100px;` sets the width.
+   e) Adds a green border.
+
+9) Inside the `<body>` section:
+   a) Add a comment describing different position values (static, relative, fixed, absolute, sticky).
+   b) Add an `<h2>` heading titled "POSITIONING".
+
+10) Add a normal `<div>` with no `position` property:
+    a) It behaves as `position: static` (default).
+    b) It stays in the normal page flow.
+
+11) Add a `<div class="sticky">`:
+    a) It will scroll normally at first,
+    b) Then stick near the top (top: 1px) when the page is scrolled.
+
+12) Add a `<div class="relative">`:
+    a) The whole relative div shifts right by 100px.
+    b) Inside it, add a nested `<div class="absolute">`:
+       - The absolute div is positioned 50px from the left of the nearest positioned parent.
+       - Since `.relative` is positioned, the absolute div uses it as the reference.
+
+13) Add a `<div class="fixed">`:
+    a) It stays pinned at the top-right of the browser window even while scrolling.
+
+14) Add many `<br>` tags:
+    a) This creates lots of vertical space so you can scroll.
+    b) Scrolling helps you observe the difference between sticky and fixed behavior.
+
+15) Close the `<body>` tag and then close the `<html>` tag to end the document.
+--><!DOCTYPE html>
+<html>
+   <head>
+      <style>
+         div {
+         right: 30px;
+         border: 3px solid #ff1100;
+         }
+         .absolute {
+         position: absolute;
+         left: 50px;
+         border: 3px solid rgb(0, 204, 255);
+         }
+         .relative {
+         position: relative;
+         left: 100px;
+         border: 3px solid rgb (0, 204, 255);
+         }
+         .fixed {
+         position: fixed;
+         top: 0;
+         right: 20px;
+         width: 300px;
+         border: 3px solid rgb(0, 204, 255);
+         }
+         .sticky {
+         position: sticky;
+         top: 1px;
+         left: 20px;
+         width: 100px;
+         border: 3px solid rgb(0, 204, 255);
+         }
+      </style>
+   </head>
+   <body>
+      <h2>POSITIONING</h2>
+      <div>Static (default)</div>
+      <div class="sticky">Sticky</div>
+      <div class="relative">
+         Relative
+         <div class="absolute">Absolute inside Relative</div>
+      </div>
+      <div class="fixed">Fixed</div>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      
+   </body>
+</html>
+

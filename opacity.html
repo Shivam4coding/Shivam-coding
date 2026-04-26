@@ -1,0 +1,62 @@
+<!--
+1) Start the HTML document with `<!DOCTYPE html>` to indicate an HTML5 page.
+
+2) Open the `<html>` tag to wrap the entire webpage.
+
+3) Inside the `<head>` section, add internal CSS using the `<style>` tag.
+
+4) Create a base CSS rule for all `<div>` elements:
+   a) `background-color: #4CAF50;` sets a green background.
+   b) `padding: 10px;` adds space inside the div around its content.
+
+5) Create a CSS rule for `div.first`:
+   a) Targets the div with class="first".
+   b) `opacity: 0.1;` makes it almost transparent (very faint).
+
+6) Create a CSS rule for `div.second`:
+   a) Targets the div with class="second".
+   b) `opacity: 0.3;` makes it more visible than 0.1 but still light.
+
+7) Create a CSS rule for `div.third`:
+   a) Targets the div with class="third".
+   b) `opacity: 0.6;` makes it fairly visible but still slightly transparent.
+
+8) Inside the `<body>` section:
+   a) Add a heading `<h1>`: "The opacity Property".
+   b) Add a paragraph explaining what is being shown.
+
+9) Create multiple div blocks to demonstrate opacity values:
+   a) `<div class="first">` shows opacity 0.1.
+   b) `<div class="second">` shows opacity 0.3.
+   c) `<div class="third">` shows opacity 0.6.
+   d) A normal `<div>` with no class shows opacity 1 (default).
+
+10) Close the `<body>` tag and then close the `<html>` tag to end the document.
+--><!DOCTYPE html>
+<html>
+   <head>
+      <style>
+         div {
+         background-color: #b7ff00;
+         padding: 10px;
+         }
+         div.first {
+         opacity: 0.1;
+         }
+         div.second {
+         opacity: 0.3;
+         }
+         div.third {
+         opacity: 0.6;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>
+      <p>
+      <div class="first">Opacity 0.1</div>
+      <div class="second">Opacity 0.3</div>
+      <div class="third">Opacity 0.6</div>
+      <div>Opacity 1 (default)</div>
+      </body>
+</html>
